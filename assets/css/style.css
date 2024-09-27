@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "roboto";
+    src: url('../font/RobotoCondensed-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: "light";
+    src: url('../font/RobotoCondensed-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: "italic";
+    src: url('../font/fonnts.com-Ivy-Presto-Display-Light.otf') format('truetype');
+}
+
+
+
+body {
+    font-family: "roboto";
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #EEF1FE;
+    font-family: "roboto", sans-serif;
+}
+
+section h2{
+    text-transform: none;
+    font-family: "roboto";
+    color: black;
+    margin: 0;
+}
+section h2 span{
+    font-family: "italic";
+}
+section p{
+    font-size: 1.2rem;
+    font-family: "light";
+    margin: 0;
+    margin-top: 1rem;
+}
+#section1  .slideWork{
+    position: absolute;
+}
+.sl1{
+    width: 300px;
+}
+
+.section1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section1 .flowerElementMove{
+    position: absolute;
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #536DDB;
+    position: relative;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out; /* Add a transition to fade out */
+}
+
+/* Animation for flower1 */
+@keyframes moveFlower1 {
+    0% {
+        left: -300px;
+        top: -10%;
+    }
+    100% {
+        left: -125px;
+        top: 40%;
+    }
+}
+
+/* Animation for flower2 */
+@keyframes moveFlower2 {
+    0% {
+        right: -10%;
+        top: -10%;
+    }
+    100% {
+        right: 30%;
+        top: 20%;
+    }
+}
+
+/* Animation for flower3 */
+@keyframes moveFlower3 {
+    0% {
+        right: 20%;
+        top: 110%;
+    }
+    100% {
+        right: 20%;
+        top: 60%;
+    }
+}
+
+/* Animation for flower4 */
+@keyframes moveFlower4 {
+    0% {
+        right: -400px;
+        bottom: -10%;
+    }
+    100% {
+        right: -125px;
+        bottom: 25px;
+    }
+}
+
+/* Animation for flower5 */
+@keyframes moveFlower5 {
+    0% {
+        left: 15%;
+        bottom: -10%;
+    }
+    100% {
+        left: 25%;
+        bottom: 5%;
+    }
+}
+
+/* Animation for flower6 */
+@keyframes moveFlower6 {
+    0% {
+        left: 10%;
+        bottom: -20%;
+    }
+    100% {
+        left: 10%;
+        bottom: 8%;
+    }
+}
+
+
+@keyframes Arrow {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.loader-wrapper .arrowImg{
+    animation: Arrow 5s ease-in-out;
+}
+.loader-wrapper h2, .loader-wrapper h3{
+    animation: Arrow 5s ease-in-out;
+}
+
+/* Apply animations to flowers */
+.loader-wrapper .flower1 {
+    width: 250px;
+    position: absolute;
+    left: -125px;
+    top: 40%;
+    animation: moveFlower1 5s ease-in-out;
+}
+.loader-wrapper .flower2 {
+    width: 100px;
+    position: absolute;
+    right: 30%;
+    top: 20%;
+    animation: moveFlower2 5s ease-in-out;
+}
+.loader-wrapper .flower3 {
+    width: 30px;
+    position: absolute;
+    right: 20%;
+    top: 60%;
+    animation: moveFlower3 5s ease-in-out;
+}
+.loader-wrapper .flower4 {
+    width: 250px;
+    position: absolute;
+    right: -125px;
+    bottom: 25px;
+    animation: moveFlower4 5s ease-in-out;
+}
+.loader-wrapper .flower5 {
+    width: 30px;
+    position: absolute;
+    left: 25%;
+    bottom: 5%;
+    animation: moveFlower5 5s ease-in-out;
+}
+.loader-wrapper .flower6 {
+    width: 60px;
+    position: absolute;
+    left: 10%;
+    bottom: 8%;
+    animation: moveFlower6 5s ease-in-out;
+}
+
+/* Hide loader after loading */
+.loader-wrapper {
+    pointer-events: none;
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}

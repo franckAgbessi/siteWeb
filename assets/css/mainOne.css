@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "roboto";
+    src: url('../font/RobotoCondensed-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: "italic";
+    src: url('../font/fonnts.com-Ivy-Presto-Display-Light.otf') format('truetype');
+}
+@font-face {
+    font-family: "anton";
+    src: url('../font/Anton-Regular.ttf') format('truetype');
+}
+
+
+.mainSection1{
+    background-color: #536DDB;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 20vh;
+    color: #EEF1FE;
+    position: relative;
+    overflow: hidden;
+}
+.mainSection1 h2{
+    font-family: "roboto";
+    font-size: 2.125rem;
+    margin: 0;
+    font-weight: 400;
+    color: #EEF1FE;
+}
+
+.mainSection1 h3{
+    font-family: "italic";
+    font-size: 2.125rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+.mainSection1 .arrowImg{
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    bottom: 30px;
+    transform: translate(0%, 0%);
+    height: 10vh;
+    transition: .3s ease-in-out;
+}
+.mainSection1 .arrowImg:hover{
+    transform: translateY(20px);
+}
+.mainSection1 .arrowImg img{
+    height: 100%;
+}
+
+.mainSection1 .flower1{
+    width: 250px;
+    position: absolute;
+    left: -125px;
+    top: 40%;
+}
+.mainSection1 .flower2{
+    width: 100px;
+    position: absolute;
+    right: 30%;
+    top: 20%;
+}
+.mainSection1 .flower3{
+    width: 30px;
+    position: absolute;
+    right: 20%;
+    top: 60%;
+}
+.mainSection1 .flower4{
+    width: 250px;
+    position: absolute;
+    right: -125px;
+    bottom: 25px;
+}
+.mainSection1 .flower5{
+    width: 30px;
+    position: absolute;
+    left: 25%;
+    bottom: 5%;
+}
+.mainSection1 .flower6{
+    width: 60px;
+    position: absolute;
+    left: 10%;
+    bottom: 8%;
+}
+/* section 2 */
+.mainSection2{
+    width: 100%;
+    height: 100vh;
+}
+
+#changing-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 15rem; 
+    font-weight: bold;
+    letter-spacing: 0.1rem; 
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    font-family: "anton";
+    z-index: 100;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateX(-30px);
+    filter: blur(4px);
+    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease; 
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0); 
+  }
+
+  .flowerElementMove {
+    transition: transform 0.2s ease-out; 
+    z-index: 1;
+}
+  

@@ -1,0 +1,141 @@
+
+@font-face {
+    font-family: "roboto";
+    src: url('../font/RobotoCondensed-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: "robotoLight";
+    src: url('../font/RobotoCondensed-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: "italic";
+    src: url('../font/fonnts.com-Ivy-Presto-Display-Light.otf') format('truetype');
+}
+@font-face {
+    font-family: "anton";
+    src: url('../font/Anton-Regular.ttf') format('truetype');
+}
+
+.MyCoding{
+    background-color: #28282F;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    color: #EEF1FE;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.MyCoding h2{
+    font-family: "anton";
+    font-weight: 300;
+    font-size: 3.8rem;
+    margin: 0;
+    color: #EEF1FE;
+}
+.MyCoding span{
+    font-family: "italic";
+    font-weight: 200;
+    color: #EEF1FE;
+}
+.MyCoding p{
+    font-family: "robotoLight";
+    font-size: 1.2rem;
+    font-weight: 200;
+    max-width: 30vw;
+    text-align: center;
+    color: #EEF1FE;
+}
+
+.tab-content .content {
+    display: none;
+}
+
+.tab-content .content.active {
+    display: block;
+    background-color: #28282F;
+    color: #EEF1FE;
+    box-sizing: border-box;
+    padding: 1.25rem;
+    border-radius: 0 0 15px 15px;
+}
+
+.elementCode {
+    margin-top: 4rem;
+    border: 1px solid #eef1fe96;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.elementCode nav {
+    display: flex;
+}
+
+.elementCode nav button {
+    cursor: pointer;
+    outline: none;
+    padding: 1rem 1.5rem;
+    background-color: transparent;
+    color: #eef1fe96;
+    font-size: 1rem;
+    letter-spacing: .005em;
+    font-weight: 500;
+    border: transparent;
+    transition: color 0.5s ease-in-out;
+    flex-grow: 1;
+    text-align: center;
+    border-bottom: 1px solid #eef1fe96;
+    position: relative
+}
+
+.elementCode nav button::after {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; 
+    height: 2px;
+    background-color: #DAF781;
+    transition: width 0.3s ease-in-out; 
+}
+
+.elementCode nav button.active::after {
+    width: 100%; 
+}
+
+.elementCode nav button:hover {
+    color: #EEF1FE;
+}
+.elementCode tbody tr{
+    display: flex;
+}
+pre[class*=language-] {
+    background: transparent !important;
+    padding: 0px !important;
+    color: #EEF1FE;
+    font-family: "roboto";
+    border-radius: 0 0 15px 15px;
+    font-size: 0.9rem;
+}
+:not(pre)>code[class*=language-], pre[class*=language-] {
+    background: transparent !important;
+}
+code[class*=language-] {
+    color: #EEF1FE;
+}
+
+pre {
+    background: transparent !important;
+}
+
+.elementCode {
+    background-color: #1E1E2F; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
+.line-number{
+    margin-right: 1rem;
+}

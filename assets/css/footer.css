@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "roboto";
+    src: url('../font/RobotoCondensed-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: "robotoLight";
+    src: url('../font/RobotoCondensed-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: "italic";
+    src: url('../font/fonnts.com-Ivy-Presto-Display-Light.otf') format('truetype');
+}
+@font-face {
+    font-family: "anton";
+    src: url('../font/Anton-Regular.ttf') format('truetype');
+}
+
+
+
+footer{
+    background-color: #536DDB ;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: auto;
+}
+
+footer h2{
+    font-family: "anton";
+    font-weight: 300;
+    font-size: 3.8rem;
+    margin: 0;
+    color: #EEF1FE ;
+
+}
+footer span{
+    font-family: "italic";
+    font-weight: 200;
+    color: #EEF1FE ;
+}
+
+footer p{
+    font-family: "robotoLight";
+    font-size: 1.2rem;
+    font-weight: 200;
+    max-width: 40vw;
+    text-align: center;
+    color: #EEF1FE ;
+}
+.preFooter{
+    border-bottom: 2px solid #EEF1FE;
+    padding: 2rem 0rem;
+}
+
+footer .colorElemnt{
+    color: #DAF781;
+}
+
+.preFooter {
+    overflow: hidden;
+    position: relative;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrolling-wrapper {
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+h2#scrollingText {
+    display: flex;
+}
+
+#scrollingText {
+    white-space: nowrap;
+    will-change: transform;
+    animation: scrollText 60s linear infinite;
+}
+.colorElement{
+    color: #DAF781;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0%); 
+    }
+    50% {
+        transform: translateX(-40%); 
+    }
+    100% {
+        transform: translateX(0%); 
+    }
+}
+
+footer .content{
+    box-sizing: border-box;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+footer .content .link, .social, .logo{
+    width: 10%;
+    height: auto;
+}
+footer .content .social, .link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer .content .social ul, .link ul{
+    margin: 0;
+    padding: 0;
+}
+footer .content .social ul li, .link ul li{
+    list-style: none;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+footer .content .social ul li a, .link ul li a {
+    font-family: "robotoLight";
+    font-weight: 500;
+    color: #EEF1FE;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+}
+footer .content .social ul li a:hover , .link ul li a:hover{
+    color: #d3f86e8a;
+}
+footer .content .social ul li a:hover::after, .link ul li a:hover::after{
+    content: "✦";
+    margin-left: 4px;
+}
+
+footer .content .email{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+footer .content .email a{
+    font-size: 2rem;
+    text-decoration: underline;
+    text-align: left;
+    letter-spacing: 0em;
+    line-height: 1.6;
+    color: #EEF1FE;
+    transition: .3s ease-in-out;
+}
+footer .content .email a:hover{
+    color: #eef1fe62;
+}
+
+footer .content h2{
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: 0em;
+    line-height: 2.6;
+    color: #D3F86E;
+}
+
+footer .CopyFooter{
+    background-color: #28282F;
+    padding: 0rem 4rem;
+    box-sizing: border-box;
+}
+footer .CopyFooter h3{
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: 0em;
+    line-height: 1.6;
+    color: #fff;
+}

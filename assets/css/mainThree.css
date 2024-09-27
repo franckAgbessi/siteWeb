@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "roboto";
+    src: url('../font/RobotoCondensed-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: "robotoLight";
+    src: url('../font/RobotoCondensed-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: "italic";
+    src: url('../font/fonnts.com-Ivy-Presto-Display-Light.otf') format('truetype');
+}
+@font-face {
+    font-family: "anton";
+    src: url('../font/Anton-Regular.ttf') format('truetype');
+}
+
+.mainSection3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 4rem;
+    height: auto;
+}
+.mainSection3 h2{
+    font-family: "anton";
+    font-weight: 300;
+    font-size: 3.8rem;
+    margin: 0;
+}
+.mainSection3 span{
+    font-family: "italic";
+    font-weight: 200;
+}
+.mainSection3 p{
+    font-family: "robotoLight";
+    font-size: 1.2rem;
+    font-weight: 200;
+    max-width: 30vw;
+    text-align: center;
+}
+
+.mainSection3 .elementExp{
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    min-height: 150vh;
+    position: relative;
+}
+
+.mainSection3 .elementHover{
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: .5s ease-in-out;
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 2rem;
+    color:  #EEF1FE;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    box-shadow: 0 3px rgba(40, 40, 48, 0);
+
+}
+.mainSection3 .contentLigne {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainSection3  svg{
+    fill: #EEF1FE;
+    width: 80px;    
+    height: 60px;
+    transition: .5s ease-in-out;
+}
+.mainSection3 .elementHover:hover svg{
+    fill: #DAF781;
+    transform: rotate(320deg);
+}
+
+.mainSection3 .elementHover h3{
+    font-family: "anton";
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+.mainSection3 .elementHover span{
+    font-family: "italic";
+    font-size: 2.5rem;
+}
+.mainSection3 .elementHover h4{
+    font-family: "robotoLight";
+    padding: 0.5rem 1rem;
+    border-radius: 300px;
+    background-color: #EEF1FE;
+    font-size: 0.8rem;
+    color: #000;
+    box-shadow: 0 3px rgba(40, 40, 48, 0);
+    transition: .5s ease-in-out;
+}
+.mainSection3 .elementHover:hover h4{
+    background-color: #4c6ee2;
+    color: #EEF1FE;
+}
+
+.elementExp .btnLinkModal{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+.mainSection3 .elementHover .backGroundElement{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition:  0.5s ease-in-out;
+    filter: brightness(0.5);
+
+
+}
+.mainSection3 .el1{
+    width: 45%;
+    height: 90vh;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    transition: 0.5s ease-in-out;
+}
+
+.mainSection3 .elementHover:hover .backGroundElement{
+    left: -10%;
+    width: 110%;
+    height: 110%;
+}
+.mainSection3 .el2{
+    width: 45%;
+    height: 90vh;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.mainSection3 .el3{
+    width: 45%;
+    height: 50vh;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    transition: transform 0.5s ease;
+}
+.mainSection3 .el4{
+    width: 45%;
+    height: 50vh;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    transition: transform 0.5s ease;
+}
+
+/* SILIDE POP ELEMENT */
+

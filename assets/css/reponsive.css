@@ -1,0 +1,74 @@
+.mainSection1,
+.mainSection2,
+.mainSection3,
+.MyCoding,
+.mainSection4,
+footer{
+    overflow: hidden;
+}
+
+@media screen and (max-width:1250px) {
+    .mainSection2 .el1, .mainSection2 .el2{
+        height: 50vh;
+    }
+    .mainSection2 .elementExp{
+        min-height: 90vh;
+    }
+    footer .email a{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    body{
+        background-color: greenyellow;
+    }
+    .mainSection2 .el1, .mainSection2 .el2{
+        height: 50vh;
+        position: static;
+        z-index: 600;
+        width: 48%;
+    }
+    .elementHover .expanded {
+        width: 100% !important;
+        max-height: 40vh;
+        position: absolute !important;
+        width: 92%;
+        height: 55vh;
+    }
+    .mainSection2 .elementExp{
+        min-height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .email a{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:650px) {
+    body{
+        background-color: greenyellow;
+    }
+    .mainSection2 .el1, .mainSection2 .el2{
+        height: 50vh;
+        position: static;
+        z-index: 600;
+        width: 48%;
+    }
+    .elementHover .expanded {
+        width: 100% !important;
+        max-height: 40vh;
+        position: absolute !important;
+        width: 92%;
+        height: 55vh;
+    }
+    .mainSection2 .elementExp{
+        min-height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .email a{
+        font-size: 1.5rem;
+    }
+}
