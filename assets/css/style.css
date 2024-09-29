@@ -1,57 +1,105 @@
+
 @font-face {
-    font-family: "roboto";
-    src: url('../font/RobotoCondensed-Medium.ttf') format('truetype');
-}
-@font-face {
-    font-family: "light";
-    src: url('../font/RobotoCondensed-ExtraLight.ttf') format('truetype');
-}
-@font-face {
-    font-family: "italic";
-    src: url('../font/fonnts.com-Ivy-Presto-Display-Light.otf') format('truetype');
+    font-family: "Roboto Condensed";
+    src: url('../font/RobotoCondensed-Medium.woff2') format('woff2'),
+         url('../font/RobotoCondensed-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
+@font-face {
+    font-family: "Roboto Condensed Light";
+    src: url('../font/RobotoCondensed-Light.woff2') format('woff2'),
+         url('../font/RobotoCondensed-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: "Ivy Presto Display";
+    src: url('../font/fonnts.com-Ivy-Presto-Display-Light.woff2') format('woff2'),
+         url('../font/fonnts.com-Ivy-Presto-Display-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: "Anton";
+    src: url('../font/Anton-Regular.woff2') format('woff2'),
+         url('../font/Anton-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --main-bg-color2: #EEF1FE; 
+    --main-bg-color: #536DDB;
+    --text-color-light: #EEF1FE;
+    --text-color-dark: #000;
+    --hover-bg-color: #4c6ee2;
+    --hover-text-color: var(--text-color-light); 
+    --highlight-color: #DAF781;
+
+    --base-font-size: 16px; 
+    --large-font-size: 3.8rem; 
+    --medium-font-size: 2rem;
+    --small-font-size: 1.2rem; 
+    --extra-small-font-size: 0.875rem;
+
+    --element-shadow: 0 3px rgba(40, 40, 48, 0);
+    --border-radius: 1.5rem;
+    --transition-duration: 0.5s; 
+    --flower-transition: 0.6s;
+}
 body {
-    font-family: "roboto";
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: #EEF1FE;
-    font-family: "roboto", sans-serif;
+    background-color: var(--text-color-light); 
+    font-family: "Roboto", sans-serif; 
+    scroll-behavior: smooth;
+    font-size: var(--base-font-size);
 }
 
-section h2{
+section h2 {
     text-transform: none;
-    font-family: "roboto";
-    color: black;
+    font-family: "Roboto", sans-serif; 
+    color: var(--text-color-dark); 
     margin: 0;
 }
-section h2 span{
-    font-family: "italic";
+
+section h2 span {
+    font-family: "Ivy Presto Display"; 
 }
-section p{
-    font-size: 1.2rem;
-    font-family: "light";
+
+section p {
+    font-size: var(--small-font-size); 
+    font-family: "Roboto Condensed Light", sans-serif; 
     margin: 0;
     margin-top: 1rem;
 }
-#section1  .slideWork{
+
+#section1 .slideWork {
     position: absolute;
 }
-.sl1{
+
+.sl1 {
     width: 300px;
 }
 
-.section1{
+.section1 {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.section1 .flowerElementMove{
+
+.section1 .flowerElementMove {
     position: absolute;
 }
 
@@ -61,104 +109,53 @@ section p{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #536DDB;
+    background-color: var(--main-bg-color); 
     position: relative;
     overflow: hidden;
-    transition: opacity 1s ease-in-out; /* Add a transition to fade out */
+    transition: opacity var(--transition-duration) ease-in-out; 
 }
 
-/* Animation for flower1 */
 @keyframes moveFlower1 {
-    0% {
-        left: -300px;
-        top: -10%;
-    }
-    100% {
-        left: -125px;
-        top: 40%;
-    }
+    0% { left: -300px; top: -10%; }
+    100% { left: -125px; top: 40%; }
 }
 
-/* Animation for flower2 */
 @keyframes moveFlower2 {
-    0% {
-        right: -10%;
-        top: -10%;
-    }
-    100% {
-        right: 30%;
-        top: 20%;
-    }
+    0% { right: -10%; top: -10%; }
+    100% { right: 30%; top: 20%; }
 }
 
-/* Animation for flower3 */
 @keyframes moveFlower3 {
-    0% {
-        right: 20%;
-        top: 110%;
-    }
-    100% {
-        right: 20%;
-        top: 60%;
-    }
+    0% { right: 20%; top: 110%; }
+    100% { right: 20%; top: 60%; }
 }
 
-/* Animation for flower4 */
 @keyframes moveFlower4 {
-    0% {
-        right: -400px;
-        bottom: -10%;
-    }
-    100% {
-        right: -125px;
-        bottom: 25px;
-    }
+    0% { right: -400px; bottom: -10%; }
+    100% { right: -125px; bottom: 25px; }
 }
 
-/* Animation for flower5 */
 @keyframes moveFlower5 {
-    0% {
-        left: 15%;
-        bottom: -10%;
-    }
-    100% {
-        left: 25%;
-        bottom: 5%;
-    }
+    0% { left: 15%; bottom: -10%; }
+    100% { left: 25%; bottom: 5%; }
 }
 
-/* Animation for flower6 */
 @keyframes moveFlower6 {
-    0% {
-        left: 10%;
-        bottom: -20%;
-    }
-    100% {
-        left: 10%;
-        bottom: 8%;
-    }
+    0% { left: 10%; bottom: -20%; }
+    100% { left: 10%; bottom: 8%; }
 }
-
 
 @keyframes Arrow {
-    0% {
-        opacity: 0;
-    }
-    70% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0%, 70% { opacity: 0; }
+    100% { opacity: 1; }
 }
-.loader-wrapper .arrowImg{
-    animation: Arrow 5s ease-in-out;
-}
-.loader-wrapper h2, .loader-wrapper h3{
+
+.loader-wrapper .arrowImg, 
+.loader-wrapper h2, 
+.loader-wrapper h3 {
     animation: Arrow 5s ease-in-out;
 }
 
-/* Apply animations to flowers */
 .loader-wrapper .flower1 {
     width: 250px;
     position: absolute;
@@ -166,6 +163,7 @@ section p{
     top: 40%;
     animation: moveFlower1 5s ease-in-out;
 }
+
 .loader-wrapper .flower2 {
     width: 100px;
     position: absolute;
@@ -173,6 +171,7 @@ section p{
     top: 20%;
     animation: moveFlower2 5s ease-in-out;
 }
+
 .loader-wrapper .flower3 {
     width: 30px;
     position: absolute;
@@ -180,6 +179,7 @@ section p{
     top: 60%;
     animation: moveFlower3 5s ease-in-out;
 }
+
 .loader-wrapper .flower4 {
     width: 250px;
     position: absolute;
@@ -187,6 +187,7 @@ section p{
     bottom: 25px;
     animation: moveFlower4 5s ease-in-out;
 }
+
 .loader-wrapper .flower5 {
     width: 30px;
     position: absolute;
@@ -194,6 +195,7 @@ section p{
     bottom: 5%;
     animation: moveFlower5 5s ease-in-out;
 }
+
 .loader-wrapper .flower6 {
     width: 60px;
     position: absolute;
@@ -202,11 +204,10 @@ section p{
     animation: moveFlower6 5s ease-in-out;
 }
 
-/* Hide loader after loading */
 .loader-wrapper {
     pointer-events: none;
-    position: fixed !important;
-    top: 0px;
-    left: 0px;
+    position: fixed !important; 
+    top: 0;
+    left: 0;
     z-index: 999;
 }

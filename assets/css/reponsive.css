@@ -1,74 +1,278 @@
+/* Global Styles */
 .mainSection1,
 .mainSection2,
 .mainSection3,
 .MyCoding,
 .mainSection4,
-footer{
-    overflow: hidden;
+footer {
+  overflow: hidden;
 }
 
-@media screen and (max-width:1250px) {
-    .mainSection2 .el1, .mainSection2 .el2{
-        height: 50vh;
-    }
-    .mainSection2 .elementExp{
-        min-height: 90vh;
-    }
-    footer .email a{
-        font-size: 1.5rem;
-    }
+/* Screen width <= 1250px */
+@media screen and (max-width: 1250px) {
+  .mainSection2 .el1,
+  .mainSection2 .el2 {
+    height: 50vh;
+  }
+
+  .mainSection2 .elementExp {
+    min-height: 90vh;
+  }
+
+  footer .email a {
+    font-size: 1.5rem;
+  }
 }
 
-@media screen and (max-width:1000px) {
-    body{
-        background-color: greenyellow;
-    }
-    .mainSection2 .el1, .mainSection2 .el2{
-        height: 50vh;
-        position: static;
-        z-index: 600;
-        width: 48%;
-    }
-    .elementHover .expanded {
-        width: 100% !important;
-        max-height: 40vh;
-        position: absolute !important;
-        width: 92%;
-        height: 55vh;
-    }
-    .mainSection2 .elementExp{
-        min-height: auto;
-        display: flex;
-        justify-content: space-between;
-    }
-    footer .email a{
-        font-size: 1.5rem;
-    }
+/* Screen width <= 1000px */
+@media screen and (max-width: 1000px) {
+  .mainSection2 .el1,
+  .mainSection2 .el2 {
+    height: 50vh;
+    position: relative;
+    z-index: 600;
+    width: 48%;
+  }
+
+  .elementHover {
+    max-height: 50%;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    top: auto;
+  }
+
+  .elementHover .expanded {
+    width: 92% !important;
+    max-height: 40vh;
+    height: 55vh;
+    position: absolute !important;
+  }
+
+  .mainSection2 .elementExp {
+    min-height: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .email a {
+    font-size: 1.5rem;
+  }
 }
 
-@media screen and (max-width:650px) {
-    body{
-        background-color: greenyellow;
-    }
-    .mainSection2 .el1, .mainSection2 .el2{
-        height: 50vh;
-        position: static;
-        z-index: 600;
-        width: 48%;
-    }
-    .elementHover .expanded {
-        width: 100% !important;
-        max-height: 40vh;
-        position: absolute !important;
-        width: 92%;
-        height: 55vh;
-    }
-    .mainSection2 .elementExp{
-        min-height: auto;
-        display: flex;
-        justify-content: space-between;
-    }
-    footer .email a{
-        font-size: 1.5rem;
-    }
+@media screen and (max-width: 1000px) {
+  /* Section 1 */
+  .mainSection1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mainSection1 .flower4 {
+    right: -200px;
+  }
+
+  .mainSection1 .flower1 {
+    top: 60%;
+  }
+
+  /* Section 2 */
+  .el1,
+  .el2,
+  .el3,
+  .el4 {
+    height: 40vh;
+    position: relative !important;
+    z-index: 600;
+    width: 100%;
+    margin-bottom: 2rem;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    top: auto !important;
+  }
+
+  .elementHover.expanded {
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+    z-index: 1000;
+    background-color: #eef1fe;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .elementExp {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .elementHover .ElementHidden {
+    width: 100% !important;
+    height: 100%;
+    color: #28282f;
+  }
+
+  .ElementHidden .text p {
+    max-width: 100% !important;
+  }
+
+  .ElementDown {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+  }
+
+  .ElementHidden .text {
+    justify-content: flex-start !important;
+  }
+
+  .expanded .backGroundElement {
+    display: none;
+  }
+
+  /* Section 3 */
+  .mainSection2 p,
+  .mainSection3 p {
+    max-width: 80vw;
+  }
+
+  /* MyCoding section */
+  .MyCoding h2 {
+    text-align: center;
+  }
+
+  .MyCoding p {
+    max-width: 80%;
+  }
+
+  .elementCode nav button {
+    padding: 1rem 0.5rem;
+  }
+
+  /* Section 4 */
+  .mainSection4 .flower1 {
+    right: -26%;
+  }
+
+  .mainSection4 .flower2 {
+    left: -10%;
+  }
+
+  .mainSection4 .flower6 {
+    top: -4%;
+    max-width: 80vw;
+  }
+
+  /* Footer */
+  footer .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+
+  footer .content .email a {
+    font-size: 1.3rem !important;
+  }
+
+  footer .content .link,
+  footer .content .social,
+  footer .content .logo,
+  footer .content .email {
+    min-width: 50%;
+  }
+}
+
+/* Screen width <= 600px */
+@media screen and (max-width: 600px) {
+  .ElementHidden .text p {
+    font-size: 1.5rem !important;
+  }
+
+  .ElementHidden .text .tag .ele {
+    font-size: 1rem;
+  }
+
+  .mainSection1 h2,
+  .mainSection1 h3,
+  .mainSection4 h2 {
+    font-size: 12vw;
+    text-align: center;
+  }
+
+  .mainSection1 .flower2 {
+    top: 5%;
+  }
+
+  .mainSection4 p {
+    max-width: 100%;
+  }
+
+  .mainSection2 h2,
+  .mainSection3 h2,
+  .mainSection4 h2 {
+    font-size: 2.8rem;
+  }
+
+  .mainSection3 .elementHover,
+  .mainSection2 .elementHover {
+    height: 40vh !important;
+    width: 100%;
+  }
+
+  .elementCode nav button {
+    font-size: 0.6rem;
+  }
+
+  .elementExp .btnLinkModal {
+    display: none;
+  }
+
+  .plexElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .plexElement h3,
+  .plexElement span {
+    font-size: 5vw !important;
+  }
+  .ElementHidden h3,
+  .ElementHidden span {
+    font-size: 5vw !important;
+  }
+  .contentLigne {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .ElementHidden header{
+    padding:0.5rem !important;
+  }
+  .ElementHidden .text p{
+    display: none;
+  }
+  .ElementHidden .text .tag .ele{
+    font-size: 2vw !important;
+  }
+  footer .content .email a {
+    font-size: 1rem !important;
+}
+
+}
+
+.ElementDown svg{
+  max-width: 40px !important;
 }

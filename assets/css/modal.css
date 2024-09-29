@@ -21,22 +21,24 @@
 
 .elementHover.expanded {
   width: 80%;
-  height: 80vh;
+  height: auto;
   position: absolute;
   z-index: 1000; 
   background-color: #EEF1FE;
   box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px 0px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .expanded .backGroundElement{
   width: 48% !important;
   height: 80%;
-  position: static !important;
+  position: initial !important;
   border-radius: 1.5rem;
+  min-height: 100%;
 }
 
 .ElementHidden {
@@ -48,6 +50,7 @@
 .expanded .ElementHidden{
   display: flex;
   flex-direction: column;
+  min-height: 40vh;
 }
 .elementHover .ElementHidden{
   width: 45%;
@@ -129,7 +132,7 @@
   font-family: "robotoLight";
   line-height: 1.6;
   width: 100%;
-  max-width: 80%;
+  max-width: 100%;
   margin-top: 0px;
 }
 
@@ -153,7 +156,7 @@
 .ElementDown{
   position: absolute;
   right: -1rem;
-  bottom: -1rem;
+  top: -1rem;
 }
 
  .elementHover:hover .ElementDown svg{
